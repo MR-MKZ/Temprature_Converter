@@ -14,6 +14,17 @@ fn main() {
     let operation_mode = operation_mode.trim();
 }
 
+fn get_input(unit: &str) -> String {
+    print!("Enter temperature in {unit}: ");
+    let _ = io::stdout().flush();
+
+    let mut input = String::new();
+    let _ = io::stdin().read_line(&mut input);
+    let input = input.trim();
+
+    return input.to_string();
+}
+
 fn to_celcius(fahrenheit: f32) -> f32 {
     (fahrenheit - 32.0) * (5.0 / 9.0)
 }
