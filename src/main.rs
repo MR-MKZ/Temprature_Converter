@@ -13,3 +13,11 @@ fn main() {
     let _ = io::stdin().read_line(&mut operation_mode);
     let operation_mode = operation_mode.trim();
 }
+
+fn to_celcius(fahrenheit: f32) -> f32 {
+    (fahrenheit - 32.0) * (5.0 / 9.0)
+}
+
+fn to_fahrenheit(celcius: f32) -> f32 {
+    (celcius * (9.0 / 5.0)) + 32.0 
+}
